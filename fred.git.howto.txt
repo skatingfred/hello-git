@@ -1,0 +1,65 @@
+##########################################
+# EXEMPLES DE COMMANDES POUR INITIALISER
+##########################################
+git init
+git status
+
+vim index.html
+
+git status
+git add index.html 
+
+vim about.html
+vim style.css
+
+git add  about.html style.css 
+git status
+git rm --cached index.html 
+git status
+
+git add .
+git status
+git commit
+git log
+
+vim contact.html
+
+git commit -m "initial commit of my conctact"
+git add contact.html 
+git commit -m "initial commit of my conctact"
+git log --reverse
+git log -n 1
+git log -n 2
+
+
+
+##########################################
+# APRÈS CREATION DU FICHIER SUR GITHUB 
+##########################################
+git config --global user.name "skatingfred"
+git config --global user.email "skatingfred@free.fr"
+git config --global credentiel.helper store                                ### le mot de passe n'est plus utilisé par git, il faut utiliser le token en le collant avec clic-bouton-milieu, il ne sera demandé qu'une fois
+
+cat .git/config                                                            ### vim .git/config pour voir éditer 
+
+### une fois le répertoire créé sur github
+git branch -M main
+git remote add origin  https://github.com/skatingfred/hello-test.git
+
+
+##########################################
+# METTRE À JOUR UN FICHIER
+##########################################
+
+### on édite le fichier
+vim about.html 
+
+### on ajoute le fichier à la liste des fichiers à committer
+git add about.html 
+
+### le commit ne peut se faire sans message informatif
+git commit -m "le message d 'annonce..."
+
+### on met à jour le fichier distant
+git push -u origin main
+
