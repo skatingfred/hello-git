@@ -60,7 +60,7 @@ git add about.html
 ### le commit ne peut se faire sans message informatif
 git commit -m "le message d 'annonce..."
 
-### on met à jour le fichier distant
+### met à jour la branch main (y compris sur le remote github)
 git push -u origin main
 
 ##########################################
