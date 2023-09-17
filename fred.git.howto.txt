@@ -63,10 +63,21 @@ git commit -m "le message d 'annonce..."
 ### on met à jour le fichier distant
 git push -u origin main
 
-
 ##########################################
 # EXCLURE CERTAINS FICHIERS (vim .swp)
 ##########################################
 git config --global core.excludesfile ~/.gitexcludes
 echo "*.swp">>~/.gitexcludes
+
+
+
+##########################################
+# BRANCH
+##########################################
+# create new_branch from existing_branch
+##########################################
+git checkout -b new_branch existing_branch  
+
+
+
 
